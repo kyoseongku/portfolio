@@ -1,0 +1,126 @@
+export default {
+  aws_ddb: {
+    name: 'AWS DynamoDB',
+    class: 'blue darken-3 white-text'
+  },
+  aws_ec2: {
+    name: 'AWS EC2',
+    class: 'orange'
+  },
+  aws_l: {
+    name: 'AWS Lambda',
+    class: 'orange accent-4 white-text'
+  },
+  aws_s3: {
+    name: 'AWS S3',
+    class: 'amber darken-1'
+  },
+  cpp: {
+    name: 'C++',
+    class: 'light-blue darken-3 white-text'
+  },
+  d3: {
+    name: 'D3.js',
+    class: 'orange darken-4 amber-text text-darken-1'
+  },
+  gapi_d: {
+    name: 'Drive API',
+    class: 'amber green-text text-darken-1'
+  },
+  gapi_gm: {
+    name: 'Gmail API',
+    class: 'red darken-1 white-text'
+  },
+  gapi_li: {
+    name: 'Google Login',
+    class: 'teal lighten-1 white-text'
+  },
+  gapi_m: {
+    name: 'Google Maps API',
+    class: 'green darken-1 amber-text text-lighten-1'
+  },
+  gapi_tr: {
+    name: 'Google Translation',
+    class: 'light-blue white-text'
+  },
+  gapi_v: {
+    name: 'Vision API',
+    class: 'purple-text'
+  },
+  go: {
+    name: 'Go',
+    class: 'light-blue accent-1'
+  },
+  jv: {
+    name: 'Java',
+    class: 'light-blue darken-2 amber-text'
+  },
+  mac: {
+    name: 'Mocha & Chai',
+    class: 'brown lighten-1 white-text'
+  },
+  mdb: {
+    name: 'MongoDB',
+    class: 'black green-text'
+  },
+  njs: {
+    name: 'Node.js',
+    class: 'light-green'
+  },
+  ogl: {
+    name: 'OpenGL',
+    class: 'cyan darken-2 white-text'
+  },
+  pj: {
+    name: 'Pug/Jade',
+    class: 'deep-purple lighten-3'
+  },
+  phjs: {
+    name: 'PhantomJS',
+    class: 'teal white-text'
+  },
+  rjs: {
+    name: 'React',
+    class: 'black cyan-text text-accent-2'
+  },
+  rp: {
+    name: 'Rasp. Pi',
+    class: 'pink white-text'
+  },
+  rrr: {
+    name: 'React+Router+Redux',
+    class: 'black cyan-text text-accent-2'
+  },
+  sg: {
+    name: 'SendGrid',
+    class: 'blue white-text'
+  },
+  sh: {
+    name: 'Shell',
+    class: 'black light-green-text text-accent-3'
+  },
+  swd: {
+    name: 'Selenium WebDriver',
+    class: 'blue-grey white-text'
+  },
+  t3js: {
+    name: 'three.js',
+    class: 'white'
+  },
+  tjs: {
+    name: 'tracking.js',
+    class: 'purple accent-3 white-text'
+  },
+  tw_sms: {
+    name: 'Twilio SMS',
+    class: 'red white-text'
+  },
+  wrtc: {
+    name: 'WebRTC',
+    class: 'red darken-4 white-text'
+  },
+  ws: {
+    name: 'WebSockets',
+    class: 'indigo-text'
+  }
+}
