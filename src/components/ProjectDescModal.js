@@ -2,6 +2,37 @@ import React, { Component } from 'react'
 import './ProjectDescModal.css'
 
 export default class ProjectDescModal extends Component {
+  constructor(props) {
+    super(props)
+
+    this.close = this.close.bind(this)
+  }
+
+
+
+  componentDidUpdate() {
+    let content = document.querySelector('#projectDescModal')
+    if(content) {
+      setTimeout(() => { content.scrollTop = 0 }, 50)
+    }
+
+    let video = document.querySelector('#projectDescVideo')
+    if(video)
+      video.load()
+  }
+
+
+
+  close() {
+    let video = document.querySelector('#projectDescVideo')
+    if(video)
+      video.pause()
+
+    this.props.onClose()
+  }
+
+
+
   render() {
     let hasData = Object.keys(this.props.data).length > 0
     let hasMedia = hasData && this.props.data.media && Object.keys(this.props.data.media).length > 0
@@ -15,14 +46,11 @@ export default class ProjectDescModal extends Component {
                 <h5 className='light'>{this.props.data.name}</h5>
               </div>
               {
-                hasMedia && this.props.data.media.type === 'youtube' ? (
-                  <div className='youtube-embed'>
-                    <iframe
-                      src={this.props.data.media.src}
-                      title={this.props.data.name}
-                      frameBorder='0'
-                      allowFullScreen=''>
-                    </iframe>
+                hasMedia && this.props.data.media.type === 'video' ? (
+                  <div className='center'>
+                    <video id='projectDescVideo' className='responsive-video' controls>
+                      <source src={this.props.data.media.src} type='video/mp4'/>
+                    </video>
                   </div>
                 ) : null
               }
@@ -39,7 +67,7 @@ export default class ProjectDescModal extends Component {
           )
         }
         <div className='modal-footer'>
-          <a href='#!' className='btn-flat' onClick={this.props.onClose}>Close</a>
+          <a className='btn-flat' onClick={this.close}>Close</a>
         </div>
       </div>
     )

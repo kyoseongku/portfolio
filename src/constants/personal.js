@@ -31,8 +31,8 @@ export default [
     role: 'Lead',
     info: 'Places media (image, video, or 3D object) onto the user\'s video feed where a mapped color appears. For example, holding up a red object to the camera will render Harambe over the object while blue will render My Little Pony.',
     media: {
-      type: 'youtube',
-      src: 'https://www.youtube.com/embed/yG9SdnInDwc'
+      type: 'video',
+      src: '/static/webAR.mp4'
     },
     points: [
       'Code is available in archive/2016.zip. I may update and migrate the code, but prolly not.'
@@ -76,8 +76,8 @@ export default [
     role: 'Lead',
     info: 'Simple game where the player can maneuver a helicopter and fire missiles to shoot down giant bees while avoiding their stingers, sort of like a 3D Asteroid Blaster',
     media: {
-      type: 'youtube',
-      src: 'https://www.youtube.com/embed/gxRqHnwv_a0'
+      type: 'video',
+      src: '/static/heli.mp4'
     },
     points: [
       'Expansion of an assignment for UCLA\'s Intro to Computer Graphics course (174A), which was a coded animation',
@@ -94,8 +94,8 @@ export default [
     role: 'Lead',
     info: 'Allows users to set their availabilities for a work week and exports the data as a Microsoft Excel file',
     media: {
-      type: 'youtube',
-      src: 'https://www.youtube.com/embed/V-vss6cpjsk'
+      type: 'video',
+      src: '/static/scheduling.mp4'
     },
     points: [
       'Every week, the employees at the UCLA Computer Store filled out a paper form that indicated their availability for the following week, and the manager scheduled the employees manually. This was my attempt to automate this process.',

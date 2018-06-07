@@ -48,7 +48,9 @@ export default class Main extends Component {
   componentDidMount() {
     while(!window.M); // Wait
 
-    window.M.Modal.init(document.querySelectorAll('.modal'))
+    window.M.Modal.init(document.querySelectorAll('.modal'), {
+      dismissible: false
+    })
 
     setTimeout(() => {
       document.querySelector('.section-greeting h2').classList.add('animated')
@@ -382,7 +384,7 @@ export default class Main extends Component {
                   <a className='btn-large blue' href='https://github.com/kyoseongku'>GitHub</a>
                 </div>
                 <div className='full-width-btn'>
-                  <a className='btn-large amber' href='/static/resume-kyoseong_ku.pdf'>Resume (outdated)</a>
+                  <a className='btn-large amber' href='https://s3-us-west-2.amazonaws.com/kks.portfolio/static/resume-kyoseong_ku.pdf'>Resume (outdated)</a>
                 </div>
                 <p className='center'>No 3rd party recruiters please</p>
               </div>
