@@ -396,7 +396,11 @@ export default class Main extends Component {
             </div>
           </div>
         </div>
-        <ProjectDescModal data={this.state.projDescModalData} onClose={this.onProjDescModalClose}/>
+        <ProjectDescModal
+          history={this.props.history}
+          data={this.state.projDescModalData}
+          onClose={this.onProjDescModalClose}
+        />
       </div>
     )
   }

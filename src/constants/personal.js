@@ -14,15 +14,20 @@ export default [
     ]
   },
   {
-    name: 'D3.js Fiddle',
+    name: 'Big brother',
     role: 'Lead',
     info: 'Fiddling with data visualization (in progress)',
+    media: {
+      type: 'link',
+      src: '/bigbruv',
+      text: 'Click here to be a big brother'
+    },
     points: [
-      'Nothing to see here yet'
+      'I like to micro-manage myself because I\'m weird'
     ],
     tags: [
       'njs',
-      'rjs',
+      'rrr',
       'd3'
     ]
   },

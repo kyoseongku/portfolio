@@ -1,0 +1,8 @@
+.bigbruv-wrapper {
+  background-color: #071e40;
+}
+.bigbruv-wrapper h1, .bigbruv-wrapper h2, .bigbruv-wrapper h3,
+.bigbruv-wrapper h4, .bigbruv-wrapper h5,
+.bigbruv-wrapper p, .bigbruv-wrapper span {
+  color: #eee;
+}

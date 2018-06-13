@@ -52,6 +52,13 @@ export default class ProjectDescModal extends Component {
                       <source src={this.props.data.media.src} type='video/mp4'/>
                     </video>
                   </div>
+                ) : hasMedia && this.props.data.media.type === 'link' ? (
+                  <div className='center'>
+                    <a
+                      className='btn deep-orange'
+                      onClick={() => { this.props.history.push(this.props.data.media.src) }}
+                    >{this.props.data.media.text}</a>
+                  </div>
                 ) : null
               }
               {
