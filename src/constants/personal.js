@@ -1,37 +1,5 @@
 export default [
   {
-    name: 'Autonomous Drone',
-    role: 'Co-lead',
-    info: 'A drone that will fly on its own to a specified geocoordinate, hopefully in one piece (in progress)',
-    points: [
-      'Designed the software architecture',
-      'Developed the Raspberry Pi client',
-      'Developed the web server, which will receive a collection of sensor data from the Pi client and compute the drone\'s next state'
-    ],
-    tags: [
-      'go',
-      'rp'
-    ]
-  },
-  {
-    name: 'Big brother',
-    role: 'Lead',
-    info: 'Fiddling with data visualization (in progress)',
-    media: {
-      type: 'link',
-      src: '/bigbruv',
-      text: 'Click here to be a big brother'
-    },
-    points: [
-      'I like to micro-manage myself because I\'m weird'
-    ],
-    tags: [
-      'njs',
-      'rrr',
-      'd3'
-    ]
-  },
-  {
     name: 'WebVR Fiddle',
     role: 'Lead',
     info: 'Places media (image, video, or 3D object) onto the user\'s video feed where a mapped color appears. For example, holding up a red object to the camera will render Harambe over the object while blue will render My Little Pony.',

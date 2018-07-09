@@ -94,7 +94,6 @@ export default class Main extends Component {
       let sectionWorkH = document.querySelector('.sectionWork').offsetHeight
       let sectionProjH = document.querySelector('.sectionProjects').offsetHeight
       let sectionSchoolH = document.querySelector('.sectionSchool').offsetHeight
-
       let sectionTriggers = {}
       sectionTriggers.work = window.innerHeight
       sectionTriggers.projects = sectionTriggers.work+sectionWorkH
@@ -262,7 +261,7 @@ export default class Main extends Component {
               <div className='col s12 m6 l6'>
                 <div className='sch-col'>
                   <p><b>Designed and developed</b> various projects off of loose requirements and added features to existing code base.</p>
-                  <p><b>Provided documentation</b> including versioning, notes for users, notes for developers, API reference, and more.</p>
+                  <p><b>Provided documentation</b> including API reference, versioning, guide for users, guide for developers, and more.</p>
                   <p><b>Wrote automated tests</b> as well as interactive CLI manual tests for simulating human interactions.</p>
                 </div>
               </div>
@@ -364,20 +363,11 @@ export default class Main extends Component {
             <div className='row'>
               <div className='col s12 m6 l6 me-left'>
                 <div className='desc-block'>
-                  <p className='center'><b>Typical stack</b></p>
-                  <p className='desc-left'>Front-end:</p>
-                  <p className='desc-right'>Material design</p>
-                  <p className='desc-right'>React + Router + Redux</p>
-                  <p className='desc-left'>Back-end:</p>
-                  <p className='desc-right'>Node (ES6) or Go</p>
-                  <p className='desc-right'>AWS Linux EC2 or S3 + Lambda</p>
-                  <p className='desc-right'>AWS DynamoDB or MongoDB</p>
-                </div>
-                <div className='desc-block'>
-                  <p className='center'><b>Other languages (schoolwork)</b></p>
-                  <p className='desc-left'>Heavy usage:</p>
+                  <p className='center'><b>Other languages</b></p>
+                  <p className='center'>(Schoolwork / personal projects)</p>
+                  <p className='desc-left'>Rusty:</p>
                   <p className='desc-right'>C, C++, Java</p>
-                  <p className='desc-left'>Light usage:</p>
+                  <p className='desc-left'>Very rusty:</p>
                   <p className='desc-right'>Assembly, Lisp, MySQL, OCaml, PHP, Python</p>
                 </div>
                 <div className='full-width-btn'>
@@ -386,7 +376,9 @@ export default class Main extends Component {
                 <div className='full-width-btn'>
                   <a className='btn-large amber' href='https://s3-us-west-2.amazonaws.com/kks.portfolio/static/resume-kyoseong_ku.pdf'>Resume (outdated)</a>
                 </div>
-                <p className='center'>No 3rd party recruiters please</p>
+                <div className='desc-block'>
+                  <p className='center'>No 3rd party recruiters please</p>
+                </div>
               </div>
               <div className='col s12 m6 l6'>
                 <div className='me-img'>

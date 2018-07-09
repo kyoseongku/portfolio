@@ -42,7 +42,7 @@ export default [
   {
     name: 'Monitoring Application v2',
     role: 'Lead',
-    info: 'Application that monitor servers and apps running on them, along with a front-end dashboard',
+    info: 'Application that monitors servers and apps running on them, along with a front-end dashboard',
     points: [
       'Runs on 16 servers (physical/AWS/GCP and Ubuntu/Windows) monitoring 59 processes',
       'Detects crashed and frozen processes',
