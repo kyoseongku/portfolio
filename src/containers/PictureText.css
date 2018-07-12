@@ -1,0 +1,12 @@
+.pt-content {
+  padding: 20px;
+}
+.pt-hide {
+  display: none;
+}
+.pt-show {
+  display: block;
+}
+.pt-full-text {
+  padding: 20px 50px;
+}

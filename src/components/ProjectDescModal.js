@@ -53,9 +53,9 @@ export default class ProjectDescModal extends Component {
                     </video>
                   </div>
                 ) : hasMedia && this.props.data.media.type === 'link' ? (
-                  <div className='center'>
+                  <div className='center project-desc-link'>
                     <a
-                      className='btn deep-orange'
+                      className='btn cyan'
                       onClick={() => { this.props.history.push(this.props.data.media.src) }}
                     >{this.props.data.media.text}</a>
                   </div>

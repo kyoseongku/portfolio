@@ -1,5 +1,25 @@
 export default [
   {
+    name: 'OCR Text Detection',
+    role: 'Lead',
+    info: 'Take a picture with your device\'s camera and extract the contained text',
+    media: {
+      type: 'link',
+      src: '/pt',
+      text: 'Click here to try'
+    },
+    points: [
+      'You need to allow permissions to your camera',
+      'If you\'re viewing this on a mobile device, it should automatically select the rear-facing camera',
+      'Red rectangles will be drawn around the discovered texts, so if the background is red you won\'t be able to see it'
+    ],
+    tags: [
+      'njs',
+      'rrr',
+      'gapi_v'
+    ]
+  },
+  {
     name: 'WebVR Fiddle',
     role: 'Lead',
     info: 'Places media (image, video, or 3D object) onto the user\'s video feed where a mapped color appears. For example, holding up a red object to the camera will render Harambe over the object while blue will render My Little Pony.',

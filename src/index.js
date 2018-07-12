@@ -6,6 +6,7 @@ import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from './store'
 
 import Main from './containers/Main'
+import PictureText from './containers/PictureText'
 import './index.css'
 import registerServiceWorker from './registerServiceWorker'
 
@@ -14,6 +15,7 @@ render(
     <ConnectedRouter history={history}>
       <Switch>
         <Route exact path="/" component={Main}/>
+        <Route exact path="/pt" component={PictureText}/>
         <Route component={Main}/>
       </Switch>
     </ConnectedRouter>

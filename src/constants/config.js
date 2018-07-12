@@ -1,3 +1,3 @@
 export default {
-  API_URL: 'https://ey6mippnqc.execute-api.us-west-2.amazonaws.com/1'
+  GAPI_KEY: 'AIzaSyBI5ZyTwuqatHP9ibwvW0Y72zpbmZf6P1Q'
 }
