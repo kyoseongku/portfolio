@@ -99,13 +99,14 @@ class PictureText extends Component {
 
 
   capture() {
+    let videoWrapper = document.querySelector('.pt-video-wrapper')
     let video = document.querySelector('.pt-video-wrapper video')
     let canvas = document.querySelector('.pt-canvas-wrapper canvas')
     let context = canvas.getContext('2d')
 
-    canvas.setAttribute('width', video.videoWidth)
-    canvas.setAttribute('height', video.videoHeight)
-    context.drawImage(video, 0, 0, video.videoWidth, video.videoHeight)
+    canvas.setAttribute('width', videoWrapper.clientWidth)
+    canvas.setAttribute('height', videoWrapper.clientHeight)
+    context.drawImage(video, 0, 0, videoWrapper.clientWidth, videoWrapper.clientHeight)
 
     this.props.onCapture(canvas.toDataURL('image/png').replace('data:image/png;base64,', ''))
   }
