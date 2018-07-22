@@ -8,7 +8,7 @@ export default [
       'The Go back-end is a collection of AWS Lambda functions with AWS API Gateway serving as the router',
       'Practiced test-driven development and implemented a test suite',
       'Automated the update and deployment of front and back-ends with shell scripts and AWS CLI',
-      'Created lightweight, responsive pages using MaterializeCSS and validator.js libraries (no jQuery!)'
+      'Created lightweight, responsive pages using just MaterializeCSS and validator.js libraries'
     ],
     tags: [
       'go',
@@ -27,8 +27,7 @@ export default [
       'The endpoints are a collection of AWS Lambda functions with API Gateway serving as the router',
       'Used SendGrid for templating and emailing of notifications with string interpolation',
       'Used Twilio to send SMS notifications via REST API',
-      'Automated the update and deployment of the Lambda functions with shell scripts and AWS CLI',
-      'Created an endpoint to listen for SMS responses from Twilio'
+      'Automated the update and deployment of the Lambda functions with shell scripts and AWS CLI'
     ],
     tags: [
       'go',
