@@ -73,7 +73,7 @@ export function capture(dataURL) {
             type: 'TEXT_DETECTION'
           }],
           imageContext: {
-            languageHints: ['en']
+            languageHints: ['en', 'ko']
           }
         }]
       })

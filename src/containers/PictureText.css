@@ -1,3 +1,11 @@
+.pt-wrapper {
+  background-color: #071e40;
+}
+.pt-wrapper h1, .pt-wrapper h2, .pt-wrapper h3,
+.pt-wrapper h4, .pt-wrapper h5,
+.pt-wrapper p, .pt-wrapper span {
+  color: #eee;
+}
 .pt-content {
   padding: 20px;
 }

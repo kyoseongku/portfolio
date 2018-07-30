@@ -39,20 +39,21 @@ export default [
     ]
   },
   {
-    name: 'Monitoring Application v2',
+    name: 'Monitoring Application v1-v3',
     role: 'Lead',
     info: 'Application that monitors servers and apps running on them, along with a front-end dashboard',
     points: [
-      'Runs on 16 servers (physical/AWS/GCP and Ubuntu/Windows) monitoring 59 processes',
+      'Runs on 17 servers (physical/AWS/GCP) monitoring 80 processes',
       'Detects crashed and frozen processes',
-      'Monitors servers\' RAM usage and the heap usage of memory-intensive processes',
-      'Alerts the IT department in case of crashes, freezes, low memory, etc. via the notification service (v1)',
+      'Monitors servers\' RAM and disk usage',
+      'Alerts the IT department in case of crashes, freezes, low memory, low disk space, etc. via the notification service (v1)',
       'Web dashboard to view live status of the monitored servers and processes',
+      'Also designed and developed the second version, which was my first application using Go. Version 3 contains several rewrites to support log streaming and remote restart features for monitored processes.',
       'Also designed and developed the first version, which was written using Node.js on Express'
     ],
     tags: [
       'go',
-      'rjs',
+      'rrr',
       'aws_ec2'
     ]
   },

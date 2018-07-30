@@ -72,7 +72,7 @@ class PictureText extends Component {
       }
     }
 
-    this.handleResize()
+    setTimeout(this.handleResize, 500)
   }
 
 
@@ -104,9 +104,10 @@ class PictureText extends Component {
     let canvas = document.querySelector('.pt-canvas-wrapper canvas')
     let context = canvas.getContext('2d')
 
-    canvas.setAttribute('width', videoWrapper.clientWidth)
+    let vWHRatio = video.videoWidth/video.videoHeight
+    canvas.setAttribute('width', videoWrapper.clientHeight*vWHRatio)
     canvas.setAttribute('height', videoWrapper.clientHeight)
-    context.drawImage(video, 0, 0, videoWrapper.clientWidth, videoWrapper.clientHeight)
+    context.drawImage(video, 0, 0, videoWrapper.clientHeight*vWHRatio, videoWrapper.clientHeight)
 
     this.props.onCapture(canvas.toDataURL('image/png').replace('data:image/png;base64,', ''))
   }
@@ -132,17 +133,17 @@ class PictureText extends Component {
                 <div className={`pt-video-wrapper ${this.props.viewStream ? 'pt-show' : 'pt-hide'}`}>
                   <video className='responsive-video' autoPlay/>
                 </div>
-                {
-                  this.props.ocr.result && (
-                    <div className='pt-full-text'>
-                      {
-                        this.props.ocr.result.fullTextAnnotation.text.split('\n').map((text, i) => {
-                          return <h5 key={i} className='light'>{text}</h5>
-                        })
-                      }
-                    </div>
-                  )
-                }
+                <div className='pt-full-text'>
+                  {
+                    this.props.ocr.result ? (
+                      this.props.ocr.result.fullTextAnnotation.text.split('\n').map((text, i) => {
+                        return <h5 key={i} className='light'>{text}</h5>
+                      })
+                    ) : this.props.ocr.error ? (
+                      <h5 className='light'>{this.props.ocr.error.message}</h5>
+                    ) : null
+                  }
+                </div>
                 {
                   this.props.viewStream ? (
                     <a className='btn btn-large indigo' onClick={this.capture}>Capture</a>
