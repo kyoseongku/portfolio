@@ -71,8 +71,6 @@ class PictureText extends Component {
         context.stroke()
       }
     }
-
-    setTimeout(this.handleResize, 500)
   }
 
 
@@ -80,11 +78,6 @@ class PictureText extends Component {
   handleResize() {
     let wrapper = document.querySelector('.pt-wrapper')
     wrapper.style.minHeight = window.innerHeight+'px'
-
-    let content = document.querySelector('.pt-content')
-    content.style.paddingTop = '0px' // Reset for calculations
-    let greetingPaddingH = Math.floor((window.innerHeight-content.offsetHeight)/2)
-    content.style.paddingTop = greetingPaddingH < 0 || this.props.ocr.result ? '50px' : greetingPaddingH+'px' // 50px default padding
 
     if(window.innerHeight !== this.state.window.h || window.innerWidth !== this.state.window.w) {
       this.setState({
@@ -123,7 +116,7 @@ class PictureText extends Component {
   render() {
     return (
       <div className='pt-wrapper'>
-        <div className='pt-content'>
+        <div className='container'>
           {
             this.props.getCamera.result ? (
               <div className='center'>

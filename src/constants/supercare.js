@@ -43,7 +43,7 @@ export default [
     role: 'Lead',
     info: 'Application that monitors servers and apps running on them, along with a front-end dashboard',
     points: [
-      'Runs on 17 servers (physical/AWS/GCP) monitoring 80 processes',
+      'Runs on 16 servers (physical/AWS/GCP) monitoring 84 processes',
       'Detects crashed and frozen processes',
       'Monitors servers\' RAM and disk usage',
       'Alerts the IT department in case of crashes, freezes, low memory, low disk space, etc. via the notification service (v1)',
