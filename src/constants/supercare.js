@@ -2,7 +2,7 @@ export default [
   {
     name: 'Web Portal',
     role: 'Lead',
-    info: 'Full-stack web app on a serverless architecture (in progress)',
+    info: 'Full-stack web app on a serverless architecture',
     points: [
       'The React front-end resides in AWS S3 and is served by AWS CloudFront',
       'The Go back-end is a collection of AWS Lambda functions with AWS API Gateway serving as the router',
@@ -22,7 +22,7 @@ export default [
   {
     name: 'Notification Service v2',
     role: 'Lead',
-    info: 'Second iteration of the notification service, rebuilt on a serverless architecture using Golang (in progress)',
+    info: 'Second iteration of the notification service, rebuilt on a serverless architecture using Golang',
     points: [
       'The endpoints are a collection of AWS Lambda functions with API Gateway serving as the router',
       'Used SendGrid for templating and emailing of notifications with string interpolation',
@@ -41,20 +41,25 @@ export default [
   {
     name: 'Monitoring Application v1-v3',
     role: 'Lead',
-    info: 'Application that monitors servers and apps running on them, along with a front-end dashboard',
+    info: 'Monitoring application for servers, along with a front-end dashboard',
     points: [
-      'Runs on 16 servers (physical/AWS/GCP) monitoring 84 processes',
+      'Runs on 18 servers (physical/AWS/GCP) monitoring 210+ objects implementing a "monitorable" interface',
       'Detects crashed and frozen processes',
       'Monitors servers\' RAM and disk usage',
-      'Alerts the IT department in case of crashes, freezes, low memory, low disk space, etc. via the notification service (v1)',
+      'Alerts the IT department via email and/or SMS in case of crashes, freezes, low memory, low disk space, etc. through the notification service (v2)',
       'Web dashboard to view live status of the monitored servers and processes',
-      'Also designed and developed the second version, which was my first application using Go. Version 3 contains several rewrites to support log streaming and remote restart features for monitored processes.',
+      'Real-time streaming of applications\' log files via WebSockets',
+      'Ability to restart processes remotely through the dashboard',
+      'Also designed and developed the second version, which was my first application using Go. Version 3 is a significant rewrite.',
       'Also designed and developed the first version, which was written using Node.js on Express'
     ],
     tags: [
       'go',
       'rrr',
-      'aws_ec2'
+      'ws',
+      'aws_ec2',
+      'sg',
+      'tw_sms'
     ]
   },
   {
