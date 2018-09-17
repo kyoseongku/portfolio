@@ -14,24 +14,22 @@ export default class ProjectCard extends Component {
 
   render() {
     return (
-      <div className={`card ${this.props.section === 'pers' ? 'blue-grey' : ''}`}>
-        <div id={`card${this.props.section}${this.props.propKey}`} className='card-content project-card'>
-          <div id={`cardContent${this.props.section}${this.props.propKey}`}>
-            <div className='project-card-top'>
-              <p>{this.props.data.role}</p>
-              <a onClick={() => { this.props.onDetails(this.props.data) }}>Details</a>
-              <div className='clear'></div>
-            </div>
-            <p className='project-card-title'><b>{this.props.data.name}</b></p>
-            <p className='project-card-info'>{this.props.data.info}</p>
+      <div id={`card${this.props.section}${this.props.propKey}`} className='project-card'>
+        <div id={`cardContent${this.props.section}${this.props.propKey}`}>
+          <div className='project-card-top'>
+            <p>{this.props.data.role}</p>
+            <a onClick={() => { this.props.onDetails(this.props.data) }}>Details</a>
+            <div className='clear'></div>
           </div>
-          <div id={`cardTags${this.props.section}${this.props.propKey}`} className='project-card-tags'>
-            {
-              this.props.data.tags.map((tagKey, i) => {
-                return <div key={i} className={`chip ${tags[tagKey].class}`}>{tags[tagKey].name}</div>
-              })
-            }
-          </div>
+          <p className='project-card-title'><b>{this.props.data.name}</b></p>
+          <p className='project-card-info'>{this.props.data.info}</p>
+        </div>
+        <div id={`cardTags${this.props.section}${this.props.propKey}`} className='project-card-tags'>
+          {
+            this.props.data.tags.map((tagKey, i) => {
+              return <div key={i} className={`chip ${tags[tagKey].class}`}>{tags[tagKey].name}</div>
+            })
+          }
         </div>
       </div>
     )

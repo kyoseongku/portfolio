@@ -16,13 +16,11 @@ export default class Main extends Component {
       sectionTriggers: {
         work: Number.POSITIVE_INFINITY,
         projects: Number.POSITIVE_INFINITY,
-        school: Number.POSITIVE_INFINITY,
         me: Number.POSITIVE_INFINITY
       },
       iconAnimDidPlay: {
         work: false,
         projects: false,
-        school: false,
         me: false
       },
       projDescModalData: {}
@@ -83,22 +81,16 @@ export default class Main extends Component {
       for(let section of darkSections)
         section.style.minHeight = window.innerHeight+'px'
 
-      let meLeft = document.querySelector('.me-left')
-      let meRight = document.querySelector('.me-img')
-      meRight.style.height = meLeft.offsetHeight+'px'
-
       let greetingSection = document.querySelector('.section-greeting')
       let greetingWords = document.querySelector('.section-greeting .container')
       greetingSection.style.paddingTop = ((window.innerHeight-greetingWords.offsetHeight)/2)+'px'
 
       let sectionWorkH = document.querySelector('.sectionWork').offsetHeight
       let sectionProjH = document.querySelector('.sectionProjects').offsetHeight
-      let sectionSchoolH = document.querySelector('.sectionSchool').offsetHeight
       let sectionTriggers = {}
       sectionTriggers.work = window.innerHeight
       sectionTriggers.projects = sectionTriggers.work+sectionWorkH
-      sectionTriggers.school = sectionTriggers.projects+sectionProjH
-      sectionTriggers.me = sectionTriggers.school+sectionSchoolH
+      sectionTriggers.me = sectionTriggers.projects+sectionProjH
 
       newState = {
         sectionTriggers,
@@ -151,13 +143,6 @@ export default class Main extends Component {
         document.querySelector('.section-projects-header i').classList.add('animated')
         document.querySelector('.section-projects-header i').classList.add('hinge')
       })
-    } else if(!this.state.iconAnimDidPlay.school && window.scrollY > this.state.sectionTriggers.school-triggerOffset) {
-      this.setState({
-        iconAnimDidPlay: Object.assign(this.state.iconAnimDidPlay, { school: true })
-      }, () => {
-        document.querySelector('.section-school-header i').classList.add('animated')
-        document.querySelector('.section-school-header i').classList.add('tada')
-      })
     } else if(!this.state.iconAnimDidPlay.me && window.scrollY > this.state.sectionTriggers.me-triggerOffset) {
       this.setState({
         iconAnimDidPlay: Object.assign(this.state.iconAnimDidPlay, { me: true })
@@ -206,12 +191,10 @@ export default class Main extends Component {
 
     let sectionWorkH = document.querySelector('.sectionWork').offsetHeight
     let sectionProjH = document.querySelector('.sectionProjects').offsetHeight
-    let sectionSchoolH = document.querySelector('.sectionSchool').offsetHeight
     let sectionTriggers = {}
     sectionTriggers.work = this.state.window.h
     sectionTriggers.projects = sectionTriggers.work+sectionWorkH
-    sectionTriggers.school = sectionTriggers.projects+sectionProjH
-    sectionTriggers.me = sectionTriggers.school+sectionSchoolH
+    sectionTriggers.me = sectionTriggers.projects+sectionProjH
     this.setState({ sectionTriggers })
   }
 
@@ -256,6 +239,7 @@ export default class Main extends Component {
                   <img className='responsive-img' src='/static/img/logo_sch.png' alt='SuperCare Health logo'/>
                   <p>Feb. 2017 - Present</p>
                   <p>Software Developer</p>
+                  <p>Full-stack | Microservices | React | Node | Go | AWS</p>
                 </div>
               </div>
               <div className='col s12 m6 l6'>
@@ -269,17 +253,14 @@ export default class Main extends Component {
             <div className='row'>
               {
                 supercare.map((project, i) => {
-                  return (
-                    <div key={i} className='col s12 m6 l6'>
-                      <ProjectCard
-                        propKey={i}
-                        section={'sch'}
-                        data={project}
-                        onRender={this.updateCardSelectors}
-                        onDetails={this.onProjDescModalOpen}
-                      />
-                    </div>
-                  )
+                  return <ProjectCard
+                    key={i}
+                    propKey={i}
+                    section={'sch'}
+                    data={project}
+                    onRender={this.updateCardSelectors}
+                    onDetails={this.onProjDescModalOpen}
+                  />
                 })
               }
             </div>
@@ -295,43 +276,37 @@ export default class Main extends Component {
             <div className='row'>
               {
                 personal.map((project, i) => {
-                  return (
-                    <div key={i} className='col s12 m6 l6'>
-                      <ProjectCard
-                        propKey={i}
-                        section={'pers'}
-                        data={project}
-                        onRender={this.updateCardSelectors}
-                        onDetails={this.onProjDescModalOpen}
-                      />
-                    </div>
-                  )
+                  return <ProjectCard
+                    key={i}
+                    propKey={i}
+                    section={'pers'}
+                    data={project}
+                    onRender={this.updateCardSelectors}
+                    onDetails={this.onProjDescModalOpen}
+                  />
                 })
               }
             </div>
           </div>
         </div>
-        <div className='section-light sectionSchool'>
+        <div className='section-light sectionMe'>
           <div className='container'>
-            <div className='section-school-header'>
-              <i className='material-icons medium blue-text'>school</i>
-              <h4 className='light'>education</h4>
+            <div className='section-me-header'>
+              <i className='material-icons medium amber-text'>perm_identity</i>
+              <h4 className='light'>me</h4>
             </div>
             <div className='row'>
               <div className='col s12 m6 l6'>
-                <div className='school-col'>
-                  <img className='responsive-img' src='/static/img/logo_ucla.png' alt='UCLA logo'/>
+                <div className='center'>
+                  <div className='school-img'>
+                    <img className='responsive-img' src='/static/img/logo_ucla.png' alt='UCLA logo'/>
+                  </div>
                   <h5 className='light'>Computer Science, B.S.</h5>
                   <p><b>University of California, Los Angeles</b></p>
                   <p>Graduated Dec. 2015</p>
                 </div>
-              </div>
-              <div className='col s12 m6 l6'>
                 <div className='school-courses'>
-                  <div className='school-col'>
-                    <h5 className='light'>Relevant coursework</h5>
-                  </div>
-                  <p>&nbsp;</p>
+                  <h5 className='light'>Relevant coursework</h5>
                   <p>Algorithms &amp; Complexity</p>
                   <p>Artificial Intelligence</p>
                   <p>Computer Graphics</p>
@@ -350,25 +325,16 @@ export default class Main extends Component {
                   <p>Finance and Marketing for Engineers</p>
                   <p>Systems Engineering</p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className='section-dark sectionMe'>
-          <div className='container'>
-            <div className='section-me-header'>
-              <i className='material-icons medium amber-text'>perm_identity</i>
-              <h4 className='light'>me</h4>
-            </div>
-            <div className='row'>
-              <div className='col s12 m6 l6 me-left'>
                 <div className='desc-block'>
                   <p className='center'><b>Other languages</b></p>
                   <p className='center'>(Schoolwork / personal projects)</p>
-                  <p className='desc-left'>Rusty:</p>
-                  <p className='desc-right'>C, C++, Java</p>
-                  <p className='desc-left'>Very rusty:</p>
-                  <p className='desc-right'>Assembly, Lisp, MySQL, OCaml, PHP, Python</p>
+                  <p>Rusty: C, C++, Java</p>
+                  <p>Very rusty: Assembly, Lisp, MySQL, OCaml, PHP, Python</p>
+                </div>
+              </div>
+              <div className='col s12 m6 l6'>
+                <div className='me-img'>
+                  <img className='responsive-img' src='/static/img/me.jpg' alt='Pic of me'/>
                 </div>
                 <div className='full-width-btn'>
                   <a className='btn-large blue' href='https://github.com/kyoseongku'>GitHub</a>
@@ -377,22 +343,13 @@ export default class Main extends Component {
                   <a className='btn-large amber' href='https://s3-us-west-2.amazonaws.com/kks.portfolio/static/resume-kyoseong_ku.pdf'>Resume (outdated)</a>
                 </div>
                 <div className='desc-block'>
-                  <p className='center'>No 3rd party recruiters please</p>
-                </div>
-              </div>
-              <div className='col s12 m6 l6'>
-                <div className='me-img'>
-                  <img className='responsive-img' src='/static/img/me.jpg' alt='Pic of me'/>
+                  <p className='center'>No 3rd party recruiters plis</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <ProjectDescModal
-          history={this.props.history}
-          data={this.state.projDescModalData}
-          onClose={this.onProjDescModalClose}
-        />
+        <ProjectDescModal history={this.props.history} data={this.state.projDescModalData} onClose={this.onProjDescModalClose} />
       </div>
     )
   }

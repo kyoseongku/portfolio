@@ -2,7 +2,7 @@ export default [
   {
     name: 'OCR Text Detection',
     role: 'Lead',
-    info: 'Take a picture with your device\'s camera and extract the contained text. Does not work on iOS mobile at the moment.',
+    info: 'Take a picture with your device\'s camera and extract the contained text. DOES NOT WORK on iOS mobile at the moment.',
     media: {
       type: 'link',
       src: '/pt',
@@ -11,7 +11,7 @@ export default [
     points: [
       'You need to allow permissions to your camera',
       'If you\'re viewing this on a mobile device, it should automatically select the rear-facing camera',
-      'Red rectangles will be drawn around the discovered texts, so if the background is red you won\'t be able to see it'
+      'Red rectangles will be drawn around the discovered texts, so if the background is red you won\'t be able to see the lines'
     ],
     tags: [
       'njs',
@@ -22,12 +22,15 @@ export default [
   {
     name: 'WebVR Fiddle',
     role: 'Lead',
-    info: 'Places media (image, video, or 3D object) onto the user\'s video feed where a mapped color appears. For example, holding up a red object to the camera will render Harambe over the object while blue will render My Little Pony.',
+    info: 'Places media (image, video, or 3D object) onto the user\'s video feed where a mapped color appears',
     media: {
       type: 'video',
       src: '/static/webAR.mp4'
     },
     points: [
+      'Holding up a red object to the camera will render Harambe over the object',
+      'Holding up a green object will render Pen Pineapple Apple Pen',
+      'Holding up a blue object will render My Little Pony',
       'Code is available in archive/2016.zip. I may update and migrate the code, but prolly not.'
     ],
     tags: [
@@ -46,8 +49,8 @@ export default [
       'Developed a peer-to-peer, one-on-one video chat web app using WebRTC, which reduced server costs since the media data is transferred directly between the two participants',
       'Built a collaborative whiteboard with the ability to share images onto the whiteboard and draw on them, along with undo functionality',
       'Integrated text chat with translation and speech recognition features',
-      'Cron jobs on AWS Lambda, in order to guarantee single execution across multiple AWS EC2 instances',
-      'Automated notification emails triggered by Lambda and AWS CloudWatch',
+      'Cron jobs via AWS Lambda, in order to guarantee single execution across multiple AWS EC2 instances',
+      'Timed notification emails on Lambda, triggered by AWS CloudWatch',
       'Implmented a cookie-based session management',
       'CRUD functionality on user accounts'
     ],
@@ -73,7 +76,7 @@ export default [
       src: '/static/heli.mp4'
     },
     points: [
-      'Expansion of an assignment for UCLA\'s Intro to Computer Graphics course (174A), which was a coded animation',
+      'Expansion of my assignment for UCLA\'s Intro to Computer Graphics course (174A), which was a coded animation',
       'There are no sound effects, and only the original animation video and my initial commit are available because my laptop crashed and I didn\'t back up my files',
       'The additional code I wrote allowed the user to maneuver the helicopter along the x and y axes and fire missiles'
     ],

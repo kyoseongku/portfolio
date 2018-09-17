@@ -54,7 +54,7 @@ export default class ProjectDescModal extends Component {
                   </div>
                 ) : hasMedia && this.props.data.media.type === 'link' ? (
                   <div className='center project-desc-link'>
-                    <a className='btn cyan' href={this.props.data.media.src}>{this.props.data.media.text}</a>
+                    <a className='btn blue darken-2' href={this.props.data.media.src}>{this.props.data.media.text}</a>
                   </div>
                 ) : null
               }
