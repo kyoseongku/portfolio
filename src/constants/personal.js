@@ -1,7 +1,7 @@
 export default [
   {
     name: 'OCR Text Detection',
-    role: 'Lead',
+    role: 'Author',
     info: 'Take a picture with your device\'s camera and extract the contained text. DOES NOT WORK on iOS mobile at the moment.',
     media: {
       type: 'link',
@@ -21,7 +21,7 @@ export default [
   },
   {
     name: 'WebVR Fiddle',
-    role: 'Lead',
+    role: 'Author',
     info: 'Places media (image, video, or 3D object) onto the user\'s video feed where a mapped color appears',
     media: {
       type: 'video',
@@ -43,7 +43,7 @@ export default [
   },
   {
     name: 'Dylect',
-    role: 'Lead',
+    role: 'Co-author',
     info: 'My educational technology startup effort. Dylect (dynamic + lectures) allows educators to expand their services beyond brick walls through video chat built into the browser along with scheduling functionality and more.',
     points: [
       'Developed a peer-to-peer, one-on-one video chat web app using WebRTC, which reduced server costs since the media data is transferred directly between the two participants',
@@ -69,7 +69,7 @@ export default [
   },
   {
     name: 'Desktop Helicopter Game',
-    role: 'Lead',
+    role: 'Author',
     info: 'Simple game where the player can maneuver a helicopter and fire missiles to shoot down giant bees while avoiding their stingers, sort of like a 3D Asteroid Blaster',
     media: {
       type: 'video',
@@ -87,7 +87,7 @@ export default [
   },
   {
     name: 'Desktop Scheduling Application',
-    role: 'Lead',
+    role: 'Author',
     info: 'Allows users to set their availabilities for a work week and exports the data as a Microsoft Excel file',
     media: {
       type: 'video',

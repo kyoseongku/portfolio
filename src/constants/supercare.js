@@ -1,7 +1,20 @@
 export default [
   {
+    name: 'Automated Call Center',
+    role: 'Co-author',
+    info: 'Automated call routing and answering service using Amazon Connect',
+    points: [
+      'Provided a Lambda function to determine holidays and weekends with moment-timezone.js',
+      'In progress, more to come'
+    ],
+    tags: [
+      'njs',
+      'aws_l'
+    ]
+  },
+  {
     name: 'Web Portal',
-    role: 'Lead',
+    role: 'Author',
     info: 'Full-stack client-facing web app on a serverless architecture',
     points: [
       'The React front-end resides in AWS S3 and is served by AWS CloudFront',
@@ -22,7 +35,7 @@ export default [
   },
   {
     name: 'Notification Service v2',
-    role: 'Lead',
+    role: 'Author',
     info: 'Second iteration of the notification service, rebuilt on a serverless architecture using Golang',
     points: [
       'The endpoints are a collection of AWS Lambda functions with API Gateway serving as the router',
@@ -42,7 +55,7 @@ export default [
   },
   {
     name: 'Monitoring Application v1-v3',
-    role: 'Lead',
+    role: 'Author',
     info: 'Full-stack watchdog application for in-house applications running on multiple servers',
     points: [
       'Runs on 18 servers (physical/AWS/GCP) monitoring 210+ objects implementing a "monitorable" interface',
@@ -66,7 +79,7 @@ export default [
   },
   {
     name: 'Digital Signatures',
-    role: 'Lead',
+    role: 'Author',
     info: 'Back-end service to provide digital signing functionalities for the in-house delivery management app, along with a framework that allows internal users to create signable documents',
     points: [
       'Uses Pug/Jade for design and templating of signable documents, which allows embedding of dynamic text and data (such as custom QR codes) at render time',
@@ -97,7 +110,7 @@ export default [
   },
   {
     name: 'Notification Service v1',
-    role: 'Lead',
+    role: 'Author',
     info: 'Back-end service that sends emails to internal users for various events',
     points: [
       'Receives information about errors from various internal applications, and a periodic task aggregates them by application and sends a compact alert to IT',
@@ -114,7 +127,7 @@ export default [
   },
   {
     name: 'Document Management Application',
-    role: 'Secondary',
+    role: 'Contributor',
     info: 'Developed auxiliary full-stack services providing various functionalities for the in-house document management application',
     points: [
       'Automated crawling of a 3rd party web portal using Selenium WebDriver (log in, navigate, retrieve data, and log out)',
@@ -141,7 +154,7 @@ export default [
   },
   {
     name: 'Delivery Management Application',
-    role: 'Secondary',
+    role: 'Contributor',
     info: 'Made code changes to the in-house delivery management application',
     points: [
       'Integrated calls to the notification service (v1) in the app\'s error handling module, which discovered previously unknown errors',
@@ -156,7 +169,7 @@ export default [
   },
   {
     name: 'iOS Back-end',
-    role: 'Co-lead',
+    role: 'Co-author',
     info: 'Developed the back-end for the in-house iOS app and integrated another developer\'s endpoints and modules into the API',
     points: [
       'Designed a lightweight prescription management model based on templates',
@@ -176,7 +189,7 @@ export default [
   },
   {
     name: 'Inventory and User Management Application',
-    role: 'Lead',
+    role: 'Author',
     info: 'Full-stack proof of concept for a basic management web app',
     points: [
       'Front-end dashboard for managing items and personnel',
@@ -192,7 +205,7 @@ export default [
   },
   {
     name: 'Delivery Driver Tracking Map',
-    role: 'Lead',
+    role: 'Author',
     info: 'Web dashboard with a basic back-end that displays live locations of the company\'s delivery drivers on a map',
     points: [
       'Toggle-able traffic layer so dispatchers are more cognizant of drivers\' driving conditions',

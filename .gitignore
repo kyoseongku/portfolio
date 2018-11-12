@@ -4,4 +4,6 @@ node_modules/
 *.zip
 fiddle
 parseCSV
-OSAD
+osad
+src/constants/worklogCSV/*
+

@@ -33,6 +33,6 @@ curl
 
 // Sample response
 {
-  result: 5 // Remove the 5 chracters a, o, t, h, r, from "another" in the second string
+  result: 5 // Remove the 4 chracters ['a', 't', 'h', 'r'] from "another" in the second string and swap 'n' and 'o'
 }
 ```

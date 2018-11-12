@@ -18,6 +18,8 @@ type Entry struct {
   Date        int
   Start       float64
   End         float64
+  Employer    string
+  IsRemote    bool
   Minutes     float64
   Project     string
   Performance int
@@ -73,6 +75,8 @@ func readFile(name, year string) ([]Entry, error) {
       Date: date,
       Start: start,
       End: end,
+      Employer: "SuperCare Health",
+      IsRemote: len(line) > 7 && line[7] == "REMOTE",
       Minutes: min,
       Project: line[4],
       Performance: perf,
@@ -87,7 +91,7 @@ func readFile(name, year string) ([]Entry, error) {
 func main() {
   var err error
 
-  basePath := "./src/data/worklogCSV/"
+  basePath := "./src/constants/worklogCSV/"
   files, err := ioutil.ReadDir(basePath)
   if err != nil {
     fmt.Println(err)
@@ -99,7 +103,7 @@ func main() {
 
   for i, file := range files {
     fmt.Println("Reading", file.Name())
-    data[i], err = readFile(basePath+file.Name(), "20"+strings.Split(file.Name(), "-")[0])
+    data[i], err = readFile(basePath+file.Name(), "20"+strings.Split(file.Name(), "%2F")[1][:2])
     if err != nil {
       fmt.Println(err)
       return

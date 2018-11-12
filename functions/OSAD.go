@@ -13,7 +13,7 @@ import (
 
 
 // OSAD = optimal string alignment distance using Damerau–Levenshtein distance algorithm
-func OSAD(s1, s2 string) int {
+func osad(s1, s2 string) int {
   dist := make([][]int, len(s1)+1)
   for i := 0; i < len(dist); i++ {
     dist[i] = make([]int, len(s2)+1)
@@ -77,7 +77,7 @@ func Adapter(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
   }
 
   log.Println("Start")
-  dist := OSAD(params.Strings[0], params.Strings[1])
+  dist := osad(params.Strings[0], params.Strings[1])
   log.Printf("Done, distance: %d\n", dist)
 
   res.StatusCode = 200

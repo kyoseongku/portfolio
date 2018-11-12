@@ -239,7 +239,6 @@ export default class Main extends Component {
                   <img className='responsive-img' src='/static/img/logo_sch.png' alt='SuperCare Health logo'/>
                   <p>Feb. 2017 - Present</p>
                   <p>Software Developer</p>
-                  <p>Full-stack | Microservices | React | Node | Go | AWS</p>
                 </div>
               </div>
               <div className='col s12 m6 l6'>
