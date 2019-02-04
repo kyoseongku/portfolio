@@ -4,12 +4,16 @@ export default [
     role: 'Author',
     info: 'Full-stack web app for the IT department to manage internal applications',
     points: [
+      'Ability to add and remove email recipients for internal uses of the Notification Service (v2)',
       'Utilizes the Centralized Authentication project for security',
+      'In progress, more to come'
     ],
     tags: [
       'njs',
       'jest',
-      'gapi_d',
+      'rrr',
+      'aws_ec2',
+      'gapi_d'
     ]
   },
   {
@@ -17,14 +21,19 @@ export default [
     role: 'Author',
     info: 'Centralized authentication front-end module and back-end server for internal applications',
     points: [
-      'Front-end',
-      'Back-end',
-      'Middleware',
+      'Minified front-end module with functions implementing async/await and Promises (callback support is on TODO list)',
+      'Log in using company\'s G Suite account via Google Login button, with back-end verification through Google',
+      'Ability to detect and invalidate user if the user has logged out of his/her Google account',
+      'Security is implemented with a long-lived refresh token and short-lived JWT access token',
+      'JWT contains public payload for front-end usage and encrypted payload for usage in other developers\' back-ends',
+      'Server-side middleware module for other developers\' to authenticate/restrict access in their back-ends'
     ],
     tags: [
       'njs',
       'jest',
-      'gapi_li',
+      'mdb',
+      'aws_ec2',
+      'gapi_id'
     ]
   },
   {
@@ -89,7 +98,7 @@ export default [
       'Runs on 20 servers (physical/AWS/GCP) monitoring 230+ objects implementing a "monitorable" interface',
       'Detects crashed and frozen processes',
       'Monitors servers\' RAM and disk usage',
-      'Alerts IT via email and/or SMS in case of crashes, freezes, low memory, low disk space, etc. through the notification service (v2)',
+      'Alerts IT via email and/or SMS in case of crashes, freezes, low memory, low disk space, etc. through the Notification Service (v2)',
       'Web dashboard to view live status of the monitored objects',
       'Ability to restart processes remotely through the dashboard',
       'Real-time streaming of applications\' log files via WebSockets',
@@ -115,9 +124,9 @@ export default [
       'Ability to render multiple images representing each page of a multi-page document when provided with lengthy data, such as a delivery ticket with dozens of items',
       'Communicates pixel coordinates of input fields (checkboxes, signature field, etc.) and other document metadata to the mobile app for it to apply user input (paint checkmark on selected checkboxes, paste signature capture, etc.)',
       'Provided auxiliary CLI scripts to assist templating, such as rendering a document image preview overlayed with color-coded bounding rectangles representing different input fields',
-      'Periodic background job that merges all images of a work order into a single PDF on Lambda and emails it to the customer as an attachment through the notification service (v1)',
+      'Periodic background job that merges all images of a work order into a single PDF on Lambda and emails it to the customer as an attachment through the Notification Service (v1)',
       'Mitigated connection timeouts and load spikes in the API server by using periodic background tasks to process queued batches of saved requests in parallel',
-      'Error accumulator for high-frequency tasks to send a condensed request to the notification service (v1) for error alerts',
+      'Error accumulator for high-frequency tasks to send a condensed request to the Notification Service (v1) for error alerts',
       'Developed an automated test suite with 120+ test cases using Mocha and Chai, plus interactive CLI scripts to test cases requiring human interaction, including one to simulate a full signature flow',
       'Automated the update and deployment of the Lambda functions with shell scripts and AWS CLI',
       'Each API endpoint and each document are versioned',
@@ -161,7 +170,7 @@ export default [
       'Automated crawling of a 3rd party web portal using Selenium WebDriver (log in, navigate, retrieve data, and log out)',
       'Built a basic document recognition service using Google Vision API with the ability to recognize 9 different documents',
       'Provided a service that generates PDF files with embedded QR code and custom data, along with a web page where users can specify the custom data (user, date, etc.) to render',
-      'Periodic task that converts files from TIFF to PDF format, places copies in network shared folders, uploads to appropriate folders in Google Drive, then uses the notification service (v1) to email the PDF to appropriate recipients',
+      'Periodic task that converts files from TIFF to PDF format, places copies in network shared folders, uploads to appropriate folders in Google Drive, then uses the Notification Service (v1) to email the PDF to appropriate recipients',
       'Periodic task to retrieve and parse emails, sent by a specified sender within a specified time range, using Gmail API',
       'Periodic task to clean up aged files in specified directories',
       'Mitigated connection timeouts and spikes in server load by using periodic tasks to process queued requests',
@@ -185,7 +194,7 @@ export default [
     role: 'Contributor',
     info: 'Made code changes to the in-house delivery management application',
     points: [
-      'Integrated calls to the notification service (v1) in the app\'s error handling module, which discovered previously unknown errors',
+      'Integrated calls to the Notification Service (v1) in the app\'s error handling module, which discovered previously unknown errors',
       'Set up the back-end on a new AWS EC2 instance and modified it to run on HTTPS',
       'Developed 6 new endpoints allowing for batch update operations',
       'Replaced a PHP-based MSSQL wrapper with one based on Node.js'
@@ -212,7 +221,7 @@ export default [
       'mdb',
       'aws_ec2',
       'gapi_gm',
-      'gapi_li'
+      'gapi_id'
     ]
   },
   {
@@ -228,7 +237,7 @@ export default [
       'njs',
       'rjs',
       'mdb',
-      'gapi_li'
+      'gapi_id'
     ]
   },
   {

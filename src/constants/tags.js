@@ -31,8 +31,8 @@ export default {
     name: 'Gmail API',
     class: 'red darken-1 white-text'
   },
-  gapi_li: {
-    name: 'Google Login',
+  gapi_id: {
+    name: 'Google Identity',
     class: 'teal lighten-1 white-text'
   },
   gapi_m: {

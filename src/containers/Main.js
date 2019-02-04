@@ -145,7 +145,7 @@ class Main extends Component {
                 <div className='sch-col'>
                   <p><b>Designed and developed</b> various projects off of loose requirements and added features to existing code base.</p>
                   <p><b>Provided documentation</b> including API reference, versioning, guide for users, guide for developers, and more.</p>
-                  <p><b>Wrote automated tests</b> as well as interactive CLI manual tests for simulating human interactions.</p>
+                  <p><b>Wrote automated tests</b> as well as interactive CLI manual tests for cases requiring human interaction.</p>
                 </div>
               </div>
             </div>

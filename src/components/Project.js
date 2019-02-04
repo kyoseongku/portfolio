@@ -35,11 +35,6 @@ class Project extends Component {
           {
             this.state.showDetails && (
               <div>
-                {
-                  this.props.data.points.map((point, i) => {
-                    return <p key={i} className='project-point'>{point}</p>
-                  })
-                }
                 <div className='project-tags'>
                   {
                     this.props.data.tags.map((tagKey, i) => {
@@ -47,6 +42,11 @@ class Project extends Component {
                     })
                   }
                 </div>
+                {
+                  this.props.data.points.map((point, i) => {
+                    return <p key={i} className='project-point'>- {point}</p>
+                  })
+                }
               </div>
             )
           }
