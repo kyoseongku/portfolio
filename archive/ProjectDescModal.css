@@ -1,0 +1,28 @@
+.project-desc-title {
+  padding: 10px;
+}
+.project-desc-title h5 {
+  text-align: right;
+}
+.project-desc-text {
+  padding: 10px;
+}
+.project-desc-link {
+  padding: 15px;
+}
+.youtube-embed {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+}
+.youtube-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}

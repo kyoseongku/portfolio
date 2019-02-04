@@ -4,7 +4,7 @@
   padding: 20px;
 }
 .section-dark {
-  background-color: #071e40;
+  background-color: #546e7a;
 }
 .section-light {
   background-color: #eceff1;
@@ -19,44 +19,62 @@
 .section-light p, .section-light span {
   color: #555;
 }
+
 .section-greeting, .section-work-header,
 .section-projects-header, .section-me-header {
   text-align: center;
 }
+
 .clear {
   content: '';
   clear: both;
 }
+
 .pad {
   height: 30px;
   width: 100%;
 }
+
 .sch-col {
   padding: 20px 20px 0px 20px;
 }
 .sch-col p {
   margin-top: 5px;
 }
+
 .school-img {
   padding: 30px 30px 30px 30px;
 }
+
 .school-courses {
   margin-top: 30px;
 }
+
 .desc-block {
   padding: 30px 0px;
 }
-.full-width-btn a {
+
+.me-ext-btn {
   width: 100%;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #999;
 }
+.me-ext-btn:hover {
+  cursor: pointer;
+}
+.me-ext-btn-1 {
+  margin-top: 50px;
+}
+.me-ext-btn-1:hover {
+  background: rgba(5, 170, 245, 0.75);
+}
+.me-ext-btn-2:hover {
+  background: rgba(255, 195, 10, 0.75);
+}
+
 .me-img {
-  padding: 50px;
-  margin-bottom: 0px;
+  margin-top: 50px;
   max-height: 600px;
   overflow-y: hidden;
-}
-@media only screen and (min-width: 800px) {
-  .me-img {
-    margin-bottom: 50px;
-  }
 }

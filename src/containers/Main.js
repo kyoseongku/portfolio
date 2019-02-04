@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import './Main.css'
-import ProjectCard from '../components/ProjectCard'
-import ProjectDescModal from '../components/ProjectDescModal'
+import Project from '../components/Project'
 import supercare from '../constants/supercare'
 import personal from '../constants/personal'
 
 
-
-export default class Main extends Component {
+class Main extends Component {
   constructor(props) {
     super(props)
 
@@ -22,45 +22,27 @@ export default class Main extends Component {
         work: false,
         projects: false,
         me: false
-      },
-      projDescModalData: {}
-    }
-
-    this._sch = {
-      cardSelectors: []
-    }
-    this._pers = {
-      cardSelectors: []
+      }
     }
 
     this.handleResize = this.handleResize.bind(this)
     this.handleScroll = this.handleScroll.bind(this)
-    this.updateCardSelectors = this.updateCardSelectors.bind(this)
-    this.resizeCardHeights = this.resizeCardHeights.bind(this)
-    this.onProjDescModalOpen = this.onProjDescModalOpen.bind(this)
-    this.onProjDescModalClose = this.onProjDescModalClose.bind(this)
   }
-
 
 
   componentDidMount() {
     while(!window.M); // Wait
-
-    window.M.Modal.init(document.querySelectorAll('.modal'), {
-      dismissible: false
-    })
 
     setTimeout(() => {
       document.querySelector('.section-greeting h2').classList.add('animated')
       document.querySelector('.section-greeting h2').classList.add('wobble')
     }, 500)
 
-
     window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('resize', this.handleResize)
+
     this.handleResize()
   }
-
 
 
   componentWillUnmount() {
@@ -69,11 +51,11 @@ export default class Main extends Component {
   }
 
 
-
   handleResize() {
     let newState
 
     if(window.innerHeight !== this.state.window.h || window.innerWidth !== this.state.window.w) {
+      // Stretch container to fit height
       let lightSections = document.getElementsByClassName('section-light')
       let darkSections = document.getElementsByClassName('section-dark')
       for(let section of lightSections)
@@ -81,10 +63,12 @@ export default class Main extends Component {
       for(let section of darkSections)
         section.style.minHeight = window.innerHeight+'px'
 
+      // Vertically center greeting
       let greetingSection = document.querySelector('.section-greeting')
       let greetingWords = document.querySelector('.section-greeting .container')
       greetingSection.style.paddingTop = ((window.innerHeight-greetingWords.offsetHeight)/2)+'px'
 
+      // Calculate icon animation trigger points
       let sectionWorkH = document.querySelector('.sectionWork').offsetHeight
       let sectionProjH = document.querySelector('.sectionProjects').offsetHeight
       let sectionTriggers = {}
@@ -99,36 +83,16 @@ export default class Main extends Component {
           w: window.innerWidth
         }
       }
-
-      // Reset
-      if(this._sch.cardSelectors.length === supercare.length) {
-        this._sch.cardSelectors.forEach(sel => {
-          let tags = document.querySelector(sel.tags)
-          tags.style.marginTop = '15px' // Default in ProjectCard.css
-        })
-      }
-      if(this._pers.cardSelectors.length === personal.length) {
-        this._pers.cardSelectors.forEach(sel => {
-          let tags = document.querySelector(sel.tags)
-          tags.style.marginTop = '15px' // Default in ProjectCard.css
-        })
-      }
     }
 
-    if(newState) {
-      this.setState(newState, () => {
-        if(this._sch.cardSelectors.length === supercare.length)
-          this.resizeCardHeights(this._sch.cardSelectors)
-        if(this._pers.cardSelectors.length === personal.length)
-          this.resizeCardHeights(this._pers.cardSelectors)
-      })
-    }
+    if(newState)
+      this.setState(newState)
   }
-
 
 
   handleScroll() {
     let triggerOffset = 0.3*this.state.window.h
+
     if(!this.state.iconAnimDidPlay.work && window.scrollY > this.state.sectionTriggers.work-triggerOffset) {
       this.setState({
         iconAnimDidPlay: Object.assign(this.state.iconAnimDidPlay, { work: true })
@@ -152,70 +116,6 @@ export default class Main extends Component {
       })
     }
   }
-
-
-
-  updateCardSelectors(section, selectors) {
-    if(section === 'sch')
-      this._sch.cardSelectors[selectors.id] = selectors
-    else if(section === 'pers')
-      this._pers.cardSelectors[selectors.id] = selectors
-  }
-
-
-
-  resizeCardHeights(selectors) {
-    // Ignore if mobile screen
-    if(this.state.window.w < 601)
-      return
-
-    let maxCardH = 0
-
-    selectors.forEach(sel => {
-      let card = document.querySelector(sel.card)
-      maxCardH = Math.max(card.clientHeight, maxCardH)
-    })
-
-    selectors.forEach(sel => {
-      let card = document.querySelector(sel.card)
-      let content = document.querySelector(sel.content)
-      let tags = document.querySelector(sel.tags)
-
-      if(card.clientHeight === maxCardH)
-        return
-
-      // -30 for padding in ProjectCard.css
-      let availH = maxCardH-30-content.offsetHeight-tags.offsetHeight
-      tags.style.marginTop = availH+'px'
-    })
-
-    let sectionWorkH = document.querySelector('.sectionWork').offsetHeight
-    let sectionProjH = document.querySelector('.sectionProjects').offsetHeight
-    let sectionTriggers = {}
-    sectionTriggers.work = this.state.window.h
-    sectionTriggers.projects = sectionTriggers.work+sectionWorkH
-    sectionTriggers.me = sectionTriggers.projects+sectionProjH
-    this.setState({ sectionTriggers })
-  }
-
-
-
-  onProjDescModalOpen(data) {
-    this.setState({
-      projDescModalData: data
-    }, () => {
-      let modal = window.M.Modal.getInstance(document.querySelector('#projectDescModal'))
-      modal.open()
-    })
-  }
-
-
-
-  onProjDescModalClose() {
-    let modal = window.M.Modal.getInstance(document.querySelector('#projectDescModal'))
-    modal.close()
-  }
-
 
 
   render() {
@@ -252,14 +152,7 @@ export default class Main extends Component {
             <div className='row'>
               {
                 supercare.map((project, i) => {
-                  return <ProjectCard
-                    key={i}
-                    propKey={i}
-                    section={'sch'}
-                    data={project}
-                    onRender={this.updateCardSelectors}
-                    onDetails={this.onProjDescModalOpen}
-                  />
+                  return <Project key={i} propKey={i} section={'sch'} data={project}/>
                 })
               }
             </div>
@@ -275,14 +168,7 @@ export default class Main extends Component {
             <div className='row'>
               {
                 personal.map((project, i) => {
-                  return <ProjectCard
-                    key={i}
-                    propKey={i}
-                    section={'pers'}
-                    data={project}
-                    onRender={this.updateCardSelectors}
-                    onDetails={this.onProjDescModalOpen}
-                  />
+                  return <Project key={i} propKey={i} section={'pers'} data={project}/>
                 })
               }
             </div>
@@ -335,11 +221,11 @@ export default class Main extends Component {
                 <div className='me-img'>
                   <img className='responsive-img' src='/static/img/me.jpg' alt='Pic of me'/>
                 </div>
-                <div className='full-width-btn'>
-                  <a className='btn-large blue' href='https://github.com/kyoseongku'>GitHub</a>
+                <div className='me-ext-btn me-ext-btn-1' onClick={() => { window.open('https://github.com/kyoseongku', '_blank') }}>
+                  <span>GitHub</span>
                 </div>
-                <div className='full-width-btn'>
-                  <a className='btn-large amber' href='https://s3-us-west-2.amazonaws.com/kks.portfolio/static/resume-kyoseong_ku.pdf'>Resume (outdated)</a>
+                <div className='me-ext-btn me-ext-btn-2' onClick={() => { window.open('https://s3-us-west-2.amazonaws.com/kks.portfolio/static/resume-kyoseong_ku.pdf', '_blank') }}>
+                  <span>Resume (outdated)</span>
                 </div>
                 <div className='desc-block'>
                   <p className='center'>No 3rd party recruiters plis</p>
@@ -348,8 +234,20 @@ export default class Main extends Component {
             </div>
           </div>
         </div>
-        <ProjectDescModal history={this.props.history} data={this.state.projDescModalData} onClose={this.onProjDescModalClose} />
       </div>
     )
   }
 }
+
+
+const mapStateToProps = state => state
+
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+}, dispatch)
+
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Main)

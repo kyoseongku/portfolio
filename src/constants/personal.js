@@ -1,25 +1,5 @@
 export default [
   {
-    name: 'OCR Text Detection',
-    role: 'Author',
-    info: 'Take a picture with your device\'s camera and extract the contained text. There will be more to this when I find the time. DOES NOT WORK on iOS mobile at the moment.',
-    media: {
-      type: 'link',
-      src: '/pt',
-      text: 'Click here to try'
-    },
-    points: [
-      'You need to allow permissions to your camera',
-      'If you\'re viewing this on a mobile device, it should automatically select the rear-facing camera',
-      'Red rectangles will be drawn around the discovered texts, so if the background is red you won\'t be able to see the lines'
-    ],
-    tags: [
-      'njs',
-      'rrr',
-      'gapi_v'
-    ]
-  },
-  {
     name: 'WebVR Fiddle',
     role: 'Author',
     info: 'Places media (image, video, or 3D object) onto the user\'s video feed where a mapped color appears',

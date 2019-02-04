@@ -51,6 +51,10 @@ export default {
     name: 'Go',
     class: 'light-blue accent-1'
   },
+  jest: {
+    name: 'Jest',
+    class: 'light-green accent-4 white-text'
+  },
   jv: {
     name: 'Java',
     class: 'light-blue darken-2 amber-text'

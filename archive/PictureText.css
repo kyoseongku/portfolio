@@ -1,0 +1,19 @@
+.pt-wrapper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #071e40;
+}
+.pt-wrapper h1, .pt-wrapper h2, .pt-wrapper h3,
+.pt-wrapper h4, .pt-wrapper h5,
+.pt-wrapper p, .pt-wrapper span {
+  color: #eee;
+}
+.pt-hide {
+  display: none;
+}
+.pt-show {
+  display: block;
+}
+.pt-full-text {
+  padding: 20px 50px;
+}

@@ -1,5 +1,33 @@
 export default [
   {
+    name: 'IT Support Dashboard',
+    role: 'Author',
+    info: 'Full-stack web app for the IT department to manage internal applications',
+    points: [
+      'Utilizes the Centralized Authentication project for security',
+    ],
+    tags: [
+      'njs',
+      'jest',
+      'gapi_d',
+    ]
+  },
+  {
+    name: 'Centralized Authentication',
+    role: 'Author',
+    info: 'Centralized authentication front-end module and back-end server for internal applications',
+    points: [
+      'Front-end',
+      'Back-end',
+      'Middleware',
+    ],
+    tags: [
+      'njs',
+      'jest',
+      'gapi_li',
+    ]
+  },
+  {
     name: 'Automated Call Center',
     role: 'Co-author',
     info: 'Automated call routing and answering service using Amazon Connect',
