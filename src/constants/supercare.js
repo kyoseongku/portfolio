@@ -58,7 +58,7 @@ export default [
     role: 'Author',
     info: 'Full-stack watchdog application for in-house applications running on multiple servers',
     points: [
-      'Runs on 18 servers (physical/AWS/GCP) monitoring 210+ objects implementing a "monitorable" interface',
+      'Runs on 20 servers (physical/AWS/GCP) monitoring 230+ objects implementing a "monitorable" interface',
       'Detects crashed and frozen processes',
       'Monitors servers\' RAM and disk usage',
       'Alerts IT via email and/or SMS in case of crashes, freezes, low memory, low disk space, etc. through the notification service (v2)',

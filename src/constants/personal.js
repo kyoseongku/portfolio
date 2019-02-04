@@ -2,7 +2,7 @@ export default [
   {
     name: 'OCR Text Detection',
     role: 'Author',
-    info: 'Take a picture with your device\'s camera and extract the contained text. DOES NOT WORK on iOS mobile at the moment.',
+    info: 'Take a picture with your device\'s camera and extract the contained text. There will be more to this when I find the time. DOES NOT WORK on iOS mobile at the moment.',
     media: {
       type: 'link',
       src: '/pt',
