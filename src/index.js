@@ -5,7 +5,6 @@ import { Route, Switch } from 'react-router'
 import { ConnectedRouter } from 'connected-react-router'
 import store, { history } from './store'
 import './index.css'
-import registerServiceWorker from './registerServiceWorker'
 import Main from './containers/Main'
 
 render(
@@ -19,5 +18,3 @@ render(
   </Provider>,
   document.querySelector('#root')
 )
-
-registerServiceWorker()

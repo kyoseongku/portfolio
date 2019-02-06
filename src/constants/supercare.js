@@ -52,7 +52,7 @@ export default [
   {
     name: 'Web Portal',
     role: 'Author',
-    info: 'Full-stack client-facing web app on a serverless architecture',
+    info: 'Full-stack patient-facing web app on a serverless architecture',
     points: [
       'The React front-end resides in AWS S3 and is served by AWS CloudFront',
       'The Go back-end is a collection of AWS Lambda functions with AWS API Gateway serving as the router',
@@ -71,23 +71,32 @@ export default [
     ]
   },
   {
-    name: 'Notification Service v2',
+    name: 'Notification Service v1-v2',
     role: 'Author',
-    info: 'Second iteration of the notification service, rebuilt on a serverless architecture using Golang',
+    info: 'Internal and patient-facing service that sends emails and/or SMS for various events',
     points: [
+      'The second iteration is rebuilt on a serverless architecture using Golang',
       'The endpoints are a collection of AWS Lambda functions with API Gateway serving as the router',
       'Each endpoint has a production and a development version',
       'Used SendGrid to email notifications with their dynamic Handlebard-based templating feature',
       'Used Twilio to send SMS notifications via REST API',
-      'Automated the update and deployment of the Lambda functions with shell scripts and AWS CLI'
+      'Automated the update and deployment of the Lambda functions with shell scripts and AWS CLI',
+      'Receives information about errors from various internal applications and alerts IT',
+      'Receives information about new orders/faxes and notifies the appropriate sales representative',
+      'HTML emails with the ability to include attachments and respond/interact through buttons',
+      'Ability to send mass emails based on email/user groups'
     ],
     tags: [
       'go',
+      'njs',
       'sh',
+      'mdb',
       'aws_l',
       'aws_ddb',
+      'aws_ec2',
       'sg',
-      'tw_sms'
+      'tw_sms',
+      'gapi_gm'
     ]
   },
   {
@@ -143,23 +152,6 @@ export default [
       'aws_ddb',
       'aws_l',
       'phjs'
-    ]
-  },
-  {
-    name: 'Notification Service v1',
-    role: 'Author',
-    info: 'Back-end service that sends emails to internal users for various events',
-    points: [
-      'Receives information about errors from various internal applications, and a periodic task aggregates them by application and sends a compact alert to IT',
-      'Receives information about new orders/faxes and notifies the appropriate sales representative',
-      'HTML emails with the ability to include attachments and respond/interact through buttons',
-      'Ability to send mass emails based on email/user groups'
-    ],
-    tags: [
-      'njs',
-      'mdb',
-      'aws_ec2',
-      'gapi_gm'
     ]
   },
   {
@@ -221,22 +213,6 @@ export default [
       'mdb',
       'aws_ec2',
       'gapi_gm',
-      'gapi_id'
-    ]
-  },
-  {
-    name: 'Inventory and User Management Application',
-    role: 'Author',
-    info: 'Full-stack proof of concept for a basic management web app',
-    points: [
-      'Front-end dashboard for managing items and personnel',
-      'CRUD and search functionality',
-      'JWT-based authentication'
-    ],
-    tags: [
-      'njs',
-      'rjs',
-      'mdb',
       'gapi_id'
     ]
   },
