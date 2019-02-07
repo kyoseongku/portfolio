@@ -1,8 +1,25 @@
 export default [
   {
-    name: 'IT Support Dashboard',
+    name: 'Automated Call Center',
+    role: 'Co-author',
+    info: 'In-house call center with various features using Amazon Connect',
+    points: [
+      'Sends email and SMS alerts via Notification Service (v2) if a customer has been on hold for longer than specified amounts of time. There are multiple queues/departments, and the customer is escalated to the department\'s manager, supervisor, then director based on wait duration.',
+      'Provided a Lambda function to determine holidays and weekends with moment-timezone.js',
+      'In progress, more to come'
+    ],
+    tags: [
+      'njs',
+      'aws_l',
+      'aws_c',
+      'sg',
+      'tw_sms'
+    ]
+  },
+  {
+    name: 'Internal Dashboard',
     role: 'Author',
-    info: 'Full-stack web app for the IT department to manage internal applications',
+    info: 'Full-stack web app for management of internal applications',
     points: [
       'Ability to add and remove email recipients for internal uses of the Notification Service (v2)',
       'Utilizes the Centralized Authentication project for security',
@@ -34,19 +51,6 @@ export default [
       'mdb',
       'aws_ec2',
       'gapi_id'
-    ]
-  },
-  {
-    name: 'Automated Call Center',
-    role: 'Co-author',
-    info: 'Automated call routing and answering service using Amazon Connect',
-    points: [
-      'Provided a Lambda function to determine holidays and weekends with moment-timezone.js',
-      'In progress, more to come'
-    ],
-    tags: [
-      'njs',
-      'aws_l'
     ]
   },
   {

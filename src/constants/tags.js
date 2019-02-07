@@ -1,4 +1,8 @@
 export default {
+  aws_c: {
+    name: 'AWS Connect',
+    class: 'cyan white-text'
+  },
   aws_ddb: {
     name: 'AWS DynamoDB',
     class: 'blue darken-3 white-text'
