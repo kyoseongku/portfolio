@@ -6,7 +6,6 @@ I do a demonstrate of my work
 
 ## TODO
 
-* OCR/getUserMedia on iOS mobile
 * Transfer files in S3
 * Update resume PDF
 

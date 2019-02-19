@@ -4,8 +4,8 @@ export default [
     role: 'Co-author',
     info: 'In-house call center with various features using Amazon Connect',
     points: [
-      'Sends email and SMS alerts via Notification Service (v2) if a customer has been on hold for longer than specified amounts of time. There are multiple queues/departments, and the customer is escalated to the department\'s manager, supervisor, then director based on wait duration.',
-      'Provided a Lambda function to determine holidays and weekends with moment-timezone.js',
+      'Modified contact flows in Connect and provided a Lambda function to send email/SMS alerts via Notification Service (v2) if a customer has been on hold for longer than specified amounts of time. There are 20+ queues/departments, and the alert is escalated to the department\'s supervisor, manager, then director based on wait duration.',
+      'Provided a Lambda function to determine holidays and weekends',
       'In progress, more to come'
     ],
     tags: [

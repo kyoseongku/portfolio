@@ -24,7 +24,7 @@ export default [
   {
     name: 'Dylect',
     role: 'Co-author',
-    info: 'My educational technology startup effort. Dylect (dynamic + lectures) allows educators to expand their services beyond brick walls through video chat built into the browser along with scheduling functionality and more.',
+    info: 'My educational technology startup effort. Dylect (dynamic + lectures) allows educators to expand their services beyond brick walls through video chat built into the browser along with scheduling functionality and more',
     points: [
       'Developed a peer-to-peer, one-on-one video chat web app using WebRTC, which reduced server costs since the media data is transferred directly between the two participants',
       'Built a collaborative whiteboard with the ability to share images onto the whiteboard and draw on them, along with undo functionality',

@@ -43,6 +43,13 @@ class Project extends Component {
                   }
                 </div>
                 {
+                  !this.props.data.media ? null : this.props.data.media.type === 'video' ? (
+                    <div className='center'>
+                      <a href={this.props.data.media.src}>Click here to watch a demo</a>
+                    </div>
+                  ) : null
+                }
+                {
                   this.props.data.points.map((point, i) => {
                     return <p key={i} className='project-point'>- {point}</p>
                   })
