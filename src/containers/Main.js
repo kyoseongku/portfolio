@@ -143,9 +143,9 @@ class Main extends Component {
               </div>
               <div className='col s12 m6 l6'>
                 <div className='sch-col'>
-                  <p><b>Designed and developed</b> various projects off of loose requirements and added features to existing code base.</p>
-                  <p><b>Provided documentation</b> including API reference, versioning, guide for users, guide for developers, and more.</p>
-                  <p><b>Wrote automated tests</b> as well as interactive CLI manual tests for cases requiring human interaction.</p>
+                  <p><b>Designed and developed</b> multiple projects off of loose requirements and added features to existing code base.</p>
+                  <p><b>Provided documentation</b> including API reference, versioning, guides for users, notes for developers, and more.</p>
+                  <p><b>Wrote automated tests</b> as well as interactive CLI tests for cases requiring human interaction.</p>
                 </div>
               </div>
             </div>
