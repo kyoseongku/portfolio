@@ -5,7 +5,7 @@ export default [
     info: 'In-house call center with various features using Amazon Connect',
     points: [
       'Modified contact flows in Connect and provided a Lambda function to send email/SMS alerts via Notification Service (v2) if a customer has been on hold for longer than specified amounts of time. There are 20+ queues/departments, and the alert is escalated to the department\'s supervisor, manager, then director based on wait duration.',
-      'Provided a Lambda function to determine holidays and weekends',
+      'Ability to make mass outbound calls via Lambda',
       'In progress, more to come'
     ],
     tags: [
@@ -84,6 +84,7 @@ export default [
       'Each endpoint has a production and a development version',
       'Used SendGrid to email notifications with their dynamic Handlebard-based templating feature',
       'Used Twilio to send SMS notifications via REST API',
+      'Used Concord and Sfax to send faxes of PDF files residing in AWS S3',
       'Automated the update and deployment of the Lambda functions with shell scripts and AWS CLI',
       'Receives information about errors from various internal applications and alerts IT',
       'Receives information about new orders/faxes and notifies the appropriate sales representative',
@@ -99,8 +100,11 @@ export default [
       'aws_ddb',
       'aws_ec2',
       'sg',
+      'cf',
+      'sf',
       'tw_sms',
-      'gapi_gm'
+      'gapi_gm',
+      'xmlsoap'
     ]
   },
   {
@@ -108,7 +112,7 @@ export default [
     role: 'Author',
     info: 'Full-stack watchdog application for in-house applications running on multiple servers',
     points: [
-      'Runs on 20 servers (physical/AWS/GCP) monitoring 230+ objects implementing a "monitorable" interface',
+      'Runs on 23 servers (physical/AWS/GCP) monitoring 300+ objects implementing a "monitorable" interface',
       'Detects crashed and frozen processes',
       'Monitors servers\' RAM and disk usage',
       'Alerts IT via email and/or SMS in case of crashes, freezes, low memory, low disk space, etc. through the Notification Service (v2)',
@@ -128,7 +132,7 @@ export default [
     ]
   },
   {
-    name: 'Digital Signatures',
+    name: 'Digital Signatures v1-v2',
     role: 'Author',
     info: 'Back-end service to provide digital signing functionalities for the in-house delivery management app, along with a framework that allows internal users to create signable documents',
     points: [
@@ -159,10 +163,11 @@ export default [
     ]
   },
   {
-    name: 'Document Management Application',
+    name: 'Document Management Application v1-v2',
     role: 'Contributor',
-    info: 'Developed auxiliary full-stack services providing various functionalities for the in-house document management application',
+    info: 'Developed auxiliary full-stack services providing various functionalities for the in-house document management application and currently assisting with migrating the front-end to React (v2)',
     points: [
+      'Created a shopping cart React component that allows users to select specific pages across multiple fax documents and reorder them before sending them off for merging into a single PDF',
       'Automated crawling of a 3rd party web portal using Selenium WebDriver (log in, navigate, retrieve data, and log out)',
       'Built a basic document recognition service using Google Vision API with the ability to recognize 9 different documents',
       'Provided a service that generates PDF files with embedded QR code and custom data, along with a web page where users can specify the custom data (user, date, etc.) to render',
@@ -176,7 +181,7 @@ export default [
     ],
     tags: [
       'njs',
-      'rjs',
+      'rrr',
       'mdb',
       'aws_s3',
       'gapi_d',
@@ -190,6 +195,7 @@ export default [
     role: 'Contributor',
     info: 'Made code changes to the in-house delivery management application',
     points: [
+      'Provided an address validation microservice using USPS API',
       'Integrated calls to the Notification Service (v1) in the app\'s error handling module, which discovered previously unknown errors',
       'Set up the back-end on a new AWS EC2 instance and modified it to run on HTTPS',
       'Developed 6 new endpoints allowing for batch update operations',
@@ -197,7 +203,8 @@ export default [
     ],
     tags: [
       'njs',
-      'aws_ec2'
+      'aws_ec2',
+      'usps'
     ]
   },
   {

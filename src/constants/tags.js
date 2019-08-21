@@ -19,6 +19,10 @@ export default {
     name: 'AWS S3',
     class: 'amber darken-1'
   },
+  cf: {
+    name: 'ConcordFax',
+    class: 'blue-grey darken-4 white-text'
+  },
   cpp: {
     name: 'C++',
     class: 'light-blue darken-3 white-text'
@@ -99,6 +103,10 @@ export default {
     name: 'React+Router+Redux',
     class: 'black cyan-text text-accent-2'
   },
+  sf: {
+    name: 'Sfax',
+    class: 'deep-purple lighten-2 white-text'
+  },
   sg: {
     name: 'SendGrid',
     class: 'blue white-text'
@@ -123,6 +131,10 @@ export default {
     name: 'Twilio SMS',
     class: 'red white-text'
   },
+  usps: {
+    name: 'USPS',
+    class: 'blue white-text'
+  },
   wrtc: {
     name: 'WebRTC',
     class: 'red darken-4 white-text'
@@ -130,5 +142,9 @@ export default {
   ws: {
     name: 'WebSockets',
     class: 'indigo-text'
+  },
+  xmlsoap: {
+    name: 'XML & SOAP',
+    class: 'brown lighten-2 white-text'
   }
 }
