@@ -86,6 +86,24 @@ export default [
     ]
   },
   {
+    name: 'Call Center',
+    role: 'Author',
+    info: 'Amazon Connect integration with various features and Interactive Voice Recording as an internal microservice',
+    points: [
+      'Created contact flow for IVR',
+      'Ability to place mass outbound IVR calls via Lambda',
+      'Modified contact flows in Connect and provided a Lambda function to send email/SMS alerts via Notification Service (v2) if a customer has been on hold for longer than specified amounts of time. There are 20+ queues/departments, and the alert is escalated to the department\'s supervisor, manager, then director based on wait duration.'
+    ],
+    tags: [
+      'njs',
+      'aws_l',
+      'aws_c',
+      'aws_ddb',
+      'sg',
+      'tw_sms'
+    ]
+  },
+  {
     name: 'Delivery Driver Tracking Map',
     role: 'Author',
     info: 'Web dashboard with a basic back-end that displays live locations of the company\'s delivery drivers on a map',
@@ -102,22 +120,6 @@ export default [
       'rjs',
       'mdb',
       'gapi_m'
-    ]
-  },
-  {
-    name: 'Automated Call Center',
-    role: 'Co-author',
-    info: 'In-house call center with various features using Amazon Connect',
-    points: [
-      'Modified contact flows in Connect and provided a Lambda function to send email/SMS alerts via Notification Service (v2) if a customer has been on hold for longer than specified amounts of time. There are 20+ queues/departments, and the alert is escalated to the department\'s supervisor, manager, then director based on wait duration.',
-      'Ability to make mass outbound calls via Lambda'
-    ],
-    tags: [
-      'njs',
-      'aws_l',
-      'aws_c',
-      'sg',
-      'tw_sms'
     ]
   },
   {
