@@ -7,7 +7,6 @@ I do a demonstrate of my work
 ## TODO
 
 * Transfer files in S3
-* Update resume PDF
 
 ## Notes
 
@@ -35,3 +34,4 @@ curl
   result: 5 // Remove the 4 chracters ['a', 't', 'h', 'r'] from "another" in the second string and swap 'n' and 'o'
 }
 ```
+

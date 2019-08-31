@@ -146,7 +146,7 @@ export default [
   {
     name: 'Internal Dashboard',
     role: 'Author',
-    info: 'Full-stack web app for management of internal applications',
+    info: 'Full-stack web app for management of users and internal applications',
     points: [
       'Ability to add and remove email recipients for internal uses of the Notification Service (v2)',
       'Utilizes the Centralized Authentication project for security'
@@ -182,7 +182,7 @@ export default [
   {
     name: 'Document Management Application v1-v2',
     role: 'Contributor',
-    info: 'Developed auxiliary full-stack services providing various functionalities for the in-house document management application and currently assisting with migrating the front-end to React (v2)',
+    info: 'Developed auxiliary full-stack services providing various functionalities for the in-house document management application and currently assisting with migrating the front-end to React',
     points: [
       'Created a shopping cart React+Redux component that allows users to select specific pages across multiple fax documents and reorder them before sending them off for merging into a single PDF',
       'Automated crawling of a 3rd party web portal using Selenium WebDriver (log in, navigate, retrieve data, and log out)',
@@ -229,7 +229,7 @@ export default [
   {
     name: 'iOS Back-end',
     role: 'Co-author',
-    info: 'Developed the back-end for the in-house iOS app and integrated another developer\'s endpoints and modules into the API',
+    info: 'Developed the back-end for the in-house iOS app and integrated into it an existing API that contains other core business logic',
     points: [
       'Designed a lightweight prescription management model based on templates',
       'Medication and prescription management',
