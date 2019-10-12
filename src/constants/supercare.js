@@ -2,7 +2,7 @@ export default [
   {
     name: 'Monitoring Application v1-v3',
     role: 'Author',
-    info: 'Full-stack watchdog application for in-house applications running on multiple servers',
+    info: 'Full-stack watchdog monitoring in-house web applications across multiple servers',
     points: [
       'Runs on 23 servers (on-premise/AWS/GCP) monitoring 300+ objects implementing a "monitorable" interface',
       'Detects crashed and frozen processes, and monitors servers\' RAM and disk usage',
@@ -90,17 +90,18 @@ export default [
     role: 'Author',
     info: 'Amazon Connect integration with various features and Interactive Voice Recording as an internal microservice',
     points: [
-      'Created contact flow for IVR',
+      'Created contact flow for IVR that collects information from patients, with the option to transfer to an agent',
+      'External screen pop for IVRs which displays to our agents information about the patient on the call, such as name, phone number, and inputs the patient provided during the IVR',
       'Ability to place mass outbound IVR calls via Lambda',
-      'Modified contact flows in Connect and provided a Lambda function to send email/SMS alerts via Notification Service (v2) if a customer has been on hold for longer than specified amounts of time. There are 20+ queues/departments, and the alert is escalated to the department\'s supervisor, manager, then director based on wait duration.'
+      'Modified contact flows in Connect and provided a Lambda function to send email/SMS alerts via Notification Service (v2) if a customer has been on hold for longer than specified amounts of time. There are 20+ queues/departments, and the alert is escalated to the department\'s supervisor, manager, then director based on wait duration.',
+      'UI for non-technical testers to trigger IVR calls'
     ],
     tags: [
+      'rrr',
       'njs',
       'aws_l',
       'aws_c',
-      'aws_ddb',
-      'sg',
-      'tw_sms'
+      'aws_ddb'
     ]
   },
   {

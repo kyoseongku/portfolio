@@ -124,7 +124,7 @@ class Main extends Component {
         <div className='section-dark section-greeting'>
           <div className='container'>
             <h2 className='light'>hello</h2>
-            <h5 className='light'>I'm Kyoseong (Austin), and I like to build things</h5>
+            <h5 className='light'>I'm Kyoseong (Austin), and I like to build stuffs</h5>
           </div>
         </div>
         <div className='section-light sectionWork'>
