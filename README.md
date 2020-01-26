@@ -30,4 +30,3 @@ curl
   result: 5 // Remove the 4 chracters ['a', 't', 'h', 'r'] from "another" in the second string and swap 'n' and 'o'
 }
 ```
-
