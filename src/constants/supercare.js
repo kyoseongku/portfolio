@@ -88,13 +88,13 @@ export default [
   {
     name: 'Call Center',
     role: 'Author',
-    info: 'Amazon Connect integration with various features and Interactive Voice Recording as an internal microservice',
+    info: 'Amazon Connect integration with various features and Interactive Voice Recordings as an internal microservice',
     points: [
-      'Created contact flow for IVR that collects information from patients, with the option to transfer to an agent',
-      'External screen pop for IVRs which displays to our agents information about the patient on the call, such as name, phone number, and inputs the patient provided during the IVR',
-      'Ability to place mass outbound IVR calls via Lambda',
+      'Created contact flows for IVRs that collect information from patients, with the option to transfer to an agent',
+      'Integrated a custom contact panel into the in-house document management system, which displays information about the patient on the call (name, phone number, and any inputs the patient entered during the IVR), as well as an option to directly access the patient\'s files.',
       'Modified contact flows in Connect and provided a Lambda function to send email/SMS alerts via Notification Service (v2) if a customer has been on hold for longer than specified amounts of time. There are 20+ queues/departments, and the alert is escalated to the department\'s supervisor, manager, then director based on wait duration.',
-      'UI for non-technical testers to trigger IVR calls'
+      'Created a web page for non-technical testers to trigger IVR calls and view their status',
+      'Used Lambda for the ability to place mass outbound IVR calls and for processing patient inputs during the IVR'
     ],
     tags: [
       'rrr',

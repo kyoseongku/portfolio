@@ -8,10 +8,6 @@ I do a demonstrate of my work
 
 * Transfer files in S3
 
-## Notes
-
-AWS CLI stuff need to be done on EC2
-
 ## Usage
 
 #### Optimal string alignment distance using Damerau–Levenshtein distance algorithm
