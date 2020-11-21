@@ -225,10 +225,7 @@ class Main extends Component {
                   <span>GitHub</span>
                 </div>
                 <div className='me-ext-btn me-ext-btn-2' onClick={() => { window.open('https://s3-us-west-2.amazonaws.com/kks.portfolio/static/Resume-Kyoseong_Ku.pdf', '_blank') }}>
-                  <span>Resume (Nov. 2019)</span>
-                </div>
-                <div className='desc-block'>
-                  <p className='center'>No 3rd party recruiters plis</p>
+                  <span>Resume (Nov. 2020)</span>
                 </div>
               </div>
             </div>
