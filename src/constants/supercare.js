@@ -4,9 +4,9 @@ export default [
     role: 'Author',
     info: 'Full-stack watchdog monitoring in-house web applications across multiple servers',
     points: [
-      'Runs on 23 servers (on-premise/AWS/GCP) monitoring 300+ objects implementing a "monitorable" interface',
+      'Runs on 26 servers (on-premise/AWS/GCP) monitoring 300+ objects implementing a "monitorable" interface',
       'Detects crashed and frozen processes, and monitors servers\' RAM and disk usage',
-      'Web dashboard to view live status of the monitored objects',
+      'Web dashboard to view live status of the monitored objects and for users to submit issue reports',
       'Ability to restart processes remotely through the dashboard',
       'Real-time streaming of applications\' log files via WebSockets',
       'Alerts IT in case of error state through the Notification Service (v2)',
@@ -145,22 +145,6 @@ export default [
     ]
   },
   {
-    name: 'Internal Dashboard',
-    role: 'Author',
-    info: 'Full-stack web app for management of users and internal applications',
-    points: [
-      'Ability to add and remove email recipients for internal uses of the Notification Service (v2)',
-      'Utilizes the Centralized Authentication project for security'
-    ],
-    tags: [
-      'njs',
-      'jest',
-      'rrr',
-      'aws_ec2',
-      'gapi_d'
-    ]
-  },
-  {
     name: 'Centralized Authentication',
     role: 'Author',
     info: 'Centralized authentication front-end module and back-end server for internal applications',
@@ -185,6 +169,7 @@ export default [
     role: 'Contributor',
     info: 'Developed auxiliary full-stack services providing various functionalities for the in-house document management application and currently assisting with migrating the front-end to React',
     points: [
+      'Dynamic PDF builder which takes user input and displays the preview both with React components, then generates the PDF for download and/or email/fax via Notification Service (v2)',
       'Created a shopping cart React+Redux component that allows users to select specific pages across multiple fax documents and reorder them before sending them off for merging into a single PDF',
       'Automated crawling of a 3rd party web portal using Selenium WebDriver (log in, navigate, retrieve data, and log out)',
       'Built a basic document recognition service using Google Vision API with the ability to recognize 9 different documents',
