@@ -6,6 +6,7 @@ I do a demonstrate of my work
 
 ## TODO
 
+* Section with all the tags
 * Transfer files in S3
 
 ## Usage
